@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"  th:href="@{/css/style.css}"/>
+</head>
+<body>
+  <img th:src="@{/images/p33.png}"/>
+   <h1 th:text="${users}"></h1>
+   <ul>
+     <li th:each="n,status:${users}">
+          <span th:text="${status.index}+' '+${n}"></span>     
+     </li>
+   </ul>
+   <script th:src="@{js/myjs.js}"></script> 
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+   <h1>use is <span th:text="${isactive}?'ACTIVE':'NOT ACTIVE'"></span></h1>
+   <h1 th:if="${gender}=='m'">Male</h1>
+   <h1 th:unless="${gender}=='m'">Female</h1>
+   
+   <footer th:replace="footer::footer1('this is subtitle')">
+   </footer>
+    
+</body>
+</html>
